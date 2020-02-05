@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Molle:400i&display=swap');
+h1 {
+    font-family: 'Molle', cursive;
+    font-weight: 700;
+    text-shadow: 1px 1px black;
+    color: darkorchid;
+}
+
+.jumbotron {
+    background-color: darkorchid;
+}
+
+.container {
+    background-color: deepskyblue;
+    border-bottom: darkblue;
+    padding-bottom: 20px;
+}

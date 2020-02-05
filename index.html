@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/style.css" class="css">
+
+    
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+ 
+  
+
+
+  
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="jumbotron jumbotron-fluid">
+            <h1 class="display-4 font-weight-bold text-center">The Train Schedule</h1>
+                <p class="extra bold text-center">Here comes your train!</p>
+                    <h2 id="currentTime"></h2>
+        </div>
+          
+        <div class="card card-default text-center mt-4">
+            <h1 class="card-header">Current Train Schedule</h1>
+                
+             <table class="col-sm-4 table">
+                <thead>
+                    <tr id="t-table">
+                        <td class="col-sm-2 text-center font-weight-bold" id="train-display">Train#</td>
+                        <td class="col-sm-2 text-center font-weight-bold" id="destination-display">Destination</td>
+                        <td class="col-sm-2 text-center font-weight-bold" id="frequency-display">Frequency (min)</td>
+                        <td class="col-sm-2 text-center font-weight-bold" id="nextArrival-display">Next Arrival</td>
+                        <td class="col-sm-2 text-center font-weight-bold" id="mins-display">Minutes Away</td>
+                    </tr>
+                </thead>
+                <tbody class="tbodyTrain table-hover">
+                    <!-- TRAIN ROUTE GETS APPENDED HERE -->
+                </tbody>
+             </table>
+
+
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header color-peacock text-light">
+                Add Train to Schedule
+            </div>
+            <div class="px-2">
+                <form>
+                    <div class="form-group">
+                        <label for="train-input">Train Name</label>
+                        <input type="text" class="form-control" id="train-input" maxlength=20 required />
+                    </div>
+                    <div class="form-group">
+                        <label for="destination-input">Destination</label>
+                        <input type="text" class="form-control" id="destination-input" maxlength=20 required />
+                    </div>
+                    <div class="form-group">
+                        <label for="first-input">First Train Time (HH:mm - military time)</label>
+                        <input type="text" class="form-control" id="first-input" placeholder="HH:MM" maxlength=4
+                            required />
+                    </div>
+                    <div class="form-group">
+                            <label for="frequency-input">Frequency (min.)</label>
+                            <input type="number" class="form-control" id="frequency-input" required />
+                        </div>
+                        <button type="submit" class="btn btn-default btn-md color-black text-heavy" id="AddTrain">Add a Train</button>
+                </form>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script href="/assets/times.js">
+</script>
+
+</body>
+</html>
